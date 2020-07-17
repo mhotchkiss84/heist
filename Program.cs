@@ -36,11 +36,6 @@ namespace heist
                     Console.WriteLine("Please Enter A Whole Positive Number");
                 }
             }
-            // Added a blank line for spacing / readability
-            Console.WriteLine(""); 
-            // Writing Out The User Inputs  
-            Console.WriteLine($"The Team Members Name Is: {userInputTeamMember.Name}");           
-            Console.WriteLine($"Their Skill Level Is: {userInputTeamMember.SkillLevel}");
             // Prompting the user to enter the courage factor from 0.0-2.0
             Console.WriteLine("Enter A Team Members Courage Factor From 0.0 to 2.0");
             bool CourageSet = false;
@@ -49,7 +44,6 @@ namespace heist
                 try{
                     userInputTeamMember.CourageFactor = float.Parse(Console.ReadLine());
                     if(userInputTeamMember.CourageFactor >=0 && userInputTeamMember.CourageFactor <= 2.1){
-                        Console.WriteLine(userInputTeamMember.CourageFactor);
                         CourageSet = true;
                     } else{
                         Console.WriteLine("Please enter a number from 0.0 - 2.0");
@@ -58,6 +52,13 @@ namespace heist
                     Console.WriteLine("Please enter a number from 0.0 - 2.0");
                 }
             }
+                        // Added a blank line for spacing / readability
+            Console.WriteLine(""); 
+            // Writing Out The User Inputs  
+            Console.WriteLine($"The Team Members Name Is: {userInputTeamMember.Name}");           
+            Console.WriteLine($"Their Skill Level Is: {userInputTeamMember.SkillLevel}");
+            Console.WriteLine($"Their Courage Factor Is: {userInputTeamMember.CourageFactor}");
+            Console.WriteLine("");
         }
     }
 }
